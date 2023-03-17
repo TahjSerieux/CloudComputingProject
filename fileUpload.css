@@ -1,0 +1,162 @@
+body
+{
+    background-color: grey;
+    margin: 0px;
+    padding: 0px;
+
+    
+}
+div.tabGroub ,button.tabButton
+{
+    height: 45px;
+}
+div.tabGroub
+{
+    background-color: rgb(104, 44, 44);
+    border: 1px solid black;
+    
+}
+button.tabButton:hover
+{
+    background-color: rgb(72, 72, 72);
+    color: rgb(182, 181, 181);
+}
+button.tabButton
+{
+    border: 1px solid rgb(0, 0, 0);
+    /* height: 50px; */
+    float: left;
+    /* background-color: dodgerblue; */
+    transition: 0.3s;
+    width: 115px;
+    border-radius: 10px 10px 0px 0px;
+    
+}
+/* form.courseSearchBar
+{
+    display: none;
+    background-color: grey;
+    border: 1px solid black;
+} */
+section.FileUploadSection
+{
+    overflow: auto;
+
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    background-image: linear-gradient(rgb(115, 57, 221),rgba(31, 3, 84, 0.96));
+
+}
+
+section.FileUploadSection
+{
+    
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+div.fileUploadBox
+{
+
+
+    display: grid;
+    border-radius: 15px;
+    background-color:white;
+    border: 5px solid black;
+    font-family: Arial, Helvetica, sans-serif, Helvetica Neue;
+
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    vertical-align: middle;
+
+
+    width: 50vw;
+
+    height: 10%;
+    max-height: 400px;
+    min-height: 1px;
+
+
+    padding: 100px 40px 100px 40px;
+
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+
+
+
+
+
+
+}
+input.my-file
+{
+    position: relative;
+    top: -60px;
+    border-radius: 5px solid black;
+    margin-left: 30%;
+    margin-bottom: -30px;
+    color: rgba(0, 0, 0, 0);
+    /* background-color: blue; */
+}
+input.my-file::-webkit-file-upload-button
+{
+    color: white;
+    background-color: #621414;
+    padding: 20px;
+    border: none;
+    border-radius: 50px;
+    /* box-shadow: 5px 5px 5px black; */
+    
+    
+
+}
+p.uploadedFileName
+{
+    text-align: center;
+    vertical-align: middle;
+    background-color:inherit;
+    margin: 20px;
+    /* border: 3px solid black; */
+    border-radius: 20px;
+    box-shadow: none;
+    /* height: 5vh;
+    width: 45vw; */
+    position: absolute;
+    transition: 0.1s;
+
+    margin: 0;
+    cursor: default;
+    /* background-color:inherit; */
+
+
+    padding: 20px 0px 30px 0px;
+    width: 50%;
+    max-width: 450px;
+    min-width: 100px;
+    height: 30px;
+
+    
+    
+
+    
+}
+
+
+
+
+footer
+{
+    background-color: black;
+    color: white;
+    /* height: 10%; */
+    padding: 20px;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    display: flex;
+}

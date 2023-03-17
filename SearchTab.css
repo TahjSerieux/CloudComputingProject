@@ -1,0 +1,64 @@
+section.CourseNumberSearch
+{
+    min-height: 100vh;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(18, 23, 164);
+}
+section.CourseNumberSearch label
+{
+    font-size: 40px;
+    /* border: 1px solid black; */
+    border-radius: 50px;
+    margin: 0;
+    font-weight: bold;
+    color: #cac7ac;
+
+    padding: 24px 20px;
+}
+section.CourseNumberSearch form.SearchBar
+{
+    width: 100%;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+    backdrop-filter: blue(4px) ;
+
+}
+section.CourseNumberSearch form.SearchBar input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #cac7ac;
+    font-size: 40px;
+    margin-left: -35px;
+
+
+}
+::placeholder
+{
+    color: #cac7ac;
+
+}
+section.CourseNumberSearch form.SearchBar button 
+{
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: #58629b;
+    cursor: pointer;
+
+}
+section.CourseNumberSearch form.SearchBar button img
+{
+    width: 25px;
+}

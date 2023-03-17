@@ -1,0 +1,104 @@
+<html>
+
+
+    <head>
+        <title>Memetics</title>
+        <link rel="stylesheet" href="fileUpload.css">
+        <link rel="stylesheet" href="SearchTab.css">
+    </head>
+    <body>
+     
+          <div class="tabGroub" id="tabGroub">
+            <button id = "searchTab" class="tabButton" onclick="TabSelect(event,'Search')">Search</button>
+            <button id = "uploadTab" class="tabButton" onclick="TabSelect(event,'Upload')">Upload</button>
+        </div>
+<!--    COURSE SEARCH TAB -->
+
+        <section id="Search" class="TabContent CourseNumberSearch">
+          <form action="CSCIClasses.txt"class="SearchBar">
+            <label for="CourseSearch">CSCI:</label>
+            <input type="text" placeholder="Enter Course Number">
+            <button> <img src="search.png" > </button>
+          </form>
+
+        </section>
+<!--    FILE UPLOAD TAB -->
+        <section id = "Upload" class="TabContent FileUploadSection">
+            <!-- <label id="test"> gdsgdsgsdgsdg</label> -->
+            <form  class="fileUpload">
+
+                <div class="fileUploadBox" id="fileUploadBox">
+                    <input class = "my-file" type="file" name="" id="my-file" accept=".pdf">
+                    <br>
+                    <p id="message" class="uploadedFileName"></p>
+                </div>
+            </form>      
+        </section>
+
+
+
+        <footer>
+            Tahj, Xiuyi,Arif, Fahad
+        </footer>
+    </body>
+
+
+
+</html>
+<script>
+document.getElementById("searchTab").click();
+
+function TabSelect(event,Tab)
+{
+  var i;
+  var Tabs = document.getElementsByClassName("TabContent");
+  for(i =0; i<Tabs.length;i++)
+  {
+    Tabs[i].style.display = "none";
+  }
+
+    document.getElementById(Tab).style.display = "flex";
+
+}
+//Initial References
+let file = document.getElementById("my-file");
+let message = document.getElementById("message");
+
+//Call the function when there is input on the file input button
+file.addEventListener("input", () => {
+  //if user selects a file
+  if (file.files.length) {
+    let fileName = file.files[0].name;
+    // var fileName = file.files[0].name;
+    if (file.files[0].name.length >= 32)
+    {
+      var fileToUpload = fileName.substring(0,14) + "...." + fileName.substring(fileName.length-14,fileName.length);
+    }
+    else{
+      var fileToUpload = fileName;
+    }
+    // document.getElementById("testx").innerHTML = `${fileToUpload}`;
+    
+    // message.innerHTML = "submit <br/> " + `${fileName}` ;
+    
+    message.innerHTML = "submit <br/> " + `${fileToUpload}` ;
+    document.getElementById("message").style.boxShadow = "5px 5px 5px black";
+    document.getElementById("message").style.backgroundColor = "aquamarine";
+    // document.getElementById("file-submit").style.backgroundColor = "white";
+  }
+  //If user click on cancel
+  else {
+    message.innerHTML = "";
+    document.getElementById("message").style.boxShadow = "none"
+    // document.getElementById("message").style.backgroundColor
+    document.getElementById("message").style.border = "none"
+    document.getElementById("message").style.backgroundColor = document.getElementById("fileUploadBox").style.backgroundColor;
+    // document.getElementById("file-submit").style.backgroundColor = document.getElementById("fileUploadBox_box").style.backgroundColor;
+
+  }
+  
+});
+
+
+
+</script>
